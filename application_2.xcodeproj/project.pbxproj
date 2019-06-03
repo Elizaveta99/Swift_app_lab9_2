@@ -16,7 +16,6 @@
 		C9DE636722A4603800BA69AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DE636522A4603800BA69AC /* Main.storyboard */; };
 		C9DE636922A4604000BA69AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9DE636822A4604000BA69AC /* Assets.xcassets */; };
 		C9DE636C22A4604000BA69AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DE636A22A4604000BA69AC /* LaunchScreen.storyboard */; };
-		C9DE637922A46D0D00BA69AC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9DE637722A46D0D00BA69AC /* Model.xcdatamodeld */; };
 		C9DE637E22A46F2C00BA69AC /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE637A22A46F2C00BA69AC /* Record+CoreDataClass.swift */; };
 		C9DE637F22A46F2C00BA69AC /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE637B22A46F2C00BA69AC /* Record+CoreDataProperties.swift */; };
 		C9DE638022A46F2C00BA69AC /* District+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE637C22A46F2C00BA69AC /* District+CoreDataClass.swift */; };
@@ -195,7 +194,6 @@
 				C9DE636422A4603800BA69AC /* ViewController.swift in Sources */,
 				C9B609A522A4900D00226A94 /* WeatherGetter.swift in Sources */,
 				C9DE636222A4603800BA69AC /* AppDelegate.swift in Sources */,
-				C9DE637922A46D0D00BA69AC /* Model.xcdatamodeld in Sources */,
 				C9DE638022A46F2C00BA69AC /* District+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

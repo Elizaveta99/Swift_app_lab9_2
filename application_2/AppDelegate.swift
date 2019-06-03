@@ -70,65 +70,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             let entity = NSEntityDescription.entity(forEntityName: "Record", in: self.managedObjectContext)
             
             let record1 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record1.setValue("Ленинский", forKey: "name")
+            record1.setValue("Ленинский", forKey: "title")
             record1.setValue("Общежитие № 6", forKey: "info")
             
             let record2 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record2.setValue("Ленинский", forKey: "name")
+            record2.setValue("Ленинский", forKey: "title")
             record2.setValue("Общежитие № 2", forKey: "info")
             
             let record3 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record3.setValue("Ленинский", forKey: "name")
+            record3.setValue("Ленинский", forKey: "title")
             record3.setValue("Общежитие № 7", forKey: "info")
 
             let record4 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record4.setValue("Ленинский", forKey: "name")
+            record4.setValue("Ленинский", forKey: "title")
             record4.setValue("ФПМИ", forKey: "info")
             
             let record5 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record5.setValue("Ленинский", forKey: "name")
+            record5.setValue("Ленинский", forKey: "title")
             record5.setValue("Мех-мат", forKey: "info")
             
             let record6 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record6.setValue("Октябрьский", forKey: "name")
+            record6.setValue("Октябрьский", forKey: "title")
             record6.setValue("Общежитие № 1", forKey: "info")
             
             let record7 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record7.setValue("Октябрьский", forKey: "name")
+            record7.setValue("Октябрьский", forKey: "title")
             record7.setValue("ФМО", forKey: "info")
             
             let record8 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record8.setValue("Московский", forKey: "name")
+            record8.setValue("Московский", forKey: "title")
             record8.setValue("Филологический", forKey: "info")
             
             let record9 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record9.setValue("Московский", forKey: "name")
+            record9.setValue("Московский", forKey: "title")
             record9.setValue("ФФСН", forKey: "info")
             
             let record10 = Record(entity: entity!, insertInto: self.managedObjectContext)
-            record10.setValue("Центральный", forKey: "name")
+            record10.setValue("Центральный", forKey: "title")
             record10.setValue("общежитие № 8", forKey: "info")
             
             
             let entity_d = NSEntityDescription.entity(forEntityName: "District", in: self.managedObjectContext)
             
             let record1_d = District(entity: entity_d!, insertInto: self.managedObjectContext)
-            record1_d.setValue("Ленинский", forKey: "name")
+            record1_d.setValue("Ленинский", forKey: "title")
             record1_d.setValue(53.867378, forKey: "latitude")
             record1_d.setValue(27.597416, forKey: "longitude")
             
             let record2_d = District(entity: entity_d!, insertInto: self.managedObjectContext)
-            record2_d.setValue("Октябрьский", forKey: "name")
+            record2_d.setValue("Октябрьский", forKey: "title")
             record2_d.setValue(53.863225, forKey: "latitude")
             record2_d.setValue(27.537723, forKey: "longitude")
             
             let record3_d = District(entity: entity_d!, insertInto: self.managedObjectContext)
-            record3_d.setValue("Московский", forKey: "name")
+            record3_d.setValue("Московский", forKey: "title")
             record3_d.setValue(53.868128, forKey: "latitude")
             record3_d.setValue(27.477901, forKey: "longitude")
             
             let record4_d = District(entity: entity_d!, insertInto: self.managedObjectContext)
-            record4_d.setValue("Центральный", forKey: "name")
+            record4_d.setValue("Центральный", forKey: "title")
             record4_d.setValue(53.934000, forKey: "latitude")
             record4_d.setValue(27.530893, forKey: "longitude")
             

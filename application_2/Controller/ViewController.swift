@@ -62,7 +62,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Institution")
                     var info: [String] = []
 //                    do{
-                        let results = (appDelegate?.getInfo())!
+                    let results = (appDelegate.getInfo()) // ?!
                         for data in results
                         {
                             
@@ -95,7 +95,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "District")
         
         //do{
-            let results = (appDelegate?.getDistrict())!
+            let results = (appDelegate.getDistrict())
             for data in results
             {
                 let coordinate = CLLocationCoordinate2D(latitude: data.value(forKey: "latitude") as! CLLocationDegrees , longitude: data.value(forKey: "longitude") as! CLLocationDegrees)

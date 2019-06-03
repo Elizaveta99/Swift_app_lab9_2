@@ -13,7 +13,7 @@ class NewViewController: UIViewController, UITableViewDataSource
 
     @IBOutlet weak var titleLabel: UILabel!{
         didSet{
-            nameLabel.text = DistrictInfo?.name
+            titleLabel.text = DistrictInfo?.name
             print("name: \(DistrictInfo?.name)")
         }
     }
