@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C921BAA322A4A1940028D5E8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9DE637722A46D0D00BA69AC /* Model.xcdatamodeld */; };
 		C9B6099F22A48C5600226A94 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6099E22A48C5600226A94 /* NewViewController.swift */; };
 		C9B609A122A48EBF00226A94 /* ArtworkDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B609A022A48EBF00226A94 /* ArtworkDistrict.swift */; };
 		C9B609A322A48EF400226A94 /* DistrictInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B609A222A48EF400226A94 /* DistrictInfo.swift */; };
@@ -16,10 +17,6 @@
 		C9DE636722A4603800BA69AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DE636522A4603800BA69AC /* Main.storyboard */; };
 		C9DE636922A4604000BA69AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9DE636822A4604000BA69AC /* Assets.xcassets */; };
 		C9DE636C22A4604000BA69AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DE636A22A4604000BA69AC /* LaunchScreen.storyboard */; };
-		C9DE637E22A46F2C00BA69AC /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE637A22A46F2C00BA69AC /* Record+CoreDataClass.swift */; };
-		C9DE637F22A46F2C00BA69AC /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE637B22A46F2C00BA69AC /* Record+CoreDataProperties.swift */; };
-		C9DE638022A46F2C00BA69AC /* District+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE637C22A46F2C00BA69AC /* District+CoreDataClass.swift */; };
-		C9DE638122A46F2C00BA69AC /* District+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE637D22A46F2C00BA69AC /* District+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +32,6 @@
 		C9DE636B22A4604000BA69AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9DE636D22A4604000BA69AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9DE637822A46D0D00BA69AC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		C9DE637A22A46F2C00BA69AC /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C9DE637B22A46F2C00BA69AC /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C9DE637C22A46F2C00BA69AC /* District+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "District+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C9DE637D22A46F2C00BA69AC /* District+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "District+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +48,6 @@
 		C9DE635522A4603800BA69AC = {
 			isa = PBXGroup;
 			children = (
-				C9DE637A22A46F2C00BA69AC /* Record+CoreDataClass.swift */,
-				C9DE637B22A46F2C00BA69AC /* Record+CoreDataProperties.swift */,
-				C9DE637C22A46F2C00BA69AC /* District+CoreDataClass.swift */,
-				C9DE637D22A46F2C00BA69AC /* District+CoreDataProperties.swift */,
 				C9DE637722A46D0D00BA69AC /* Model.xcdatamodeld */,
 				C9DE636022A4603800BA69AC /* application_2 */,
 				C9DE635F22A4603800BA69AC /* Products */,
@@ -185,16 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9DE637F22A46F2C00BA69AC /* Record+CoreDataProperties.swift in Sources */,
-				C9DE637E22A46F2C00BA69AC /* Record+CoreDataClass.swift in Sources */,
-				C9DE638122A46F2C00BA69AC /* District+CoreDataProperties.swift in Sources */,
 				C9B609A322A48EF400226A94 /* DistrictInfo.swift in Sources */,
 				C9B6099F22A48C5600226A94 /* NewViewController.swift in Sources */,
 				C9B609A122A48EBF00226A94 /* ArtworkDistrict.swift in Sources */,
 				C9DE636422A4603800BA69AC /* ViewController.swift in Sources */,
 				C9B609A522A4900D00226A94 /* WeatherGetter.swift in Sources */,
 				C9DE636222A4603800BA69AC /* AppDelegate.swift in Sources */,
-				C9DE638022A46F2C00BA69AC /* District+CoreDataClass.swift in Sources */,
+				C921BAA322A4A1940028D5E8 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

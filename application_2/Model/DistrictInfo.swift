@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct DistrictInfo {
-    
-    var name: String?
+struct DistrictInfo
+{
+    var title: String?
     var info: [String] = []
     var latitude: Double?
     var longitude: Double?

@@ -10,11 +10,30 @@ import UIKit
 
 class NewViewController: UIViewController, UITableViewDataSource
 {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return (DistrictInfo?.info.count)!
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cellIdentifire = "cell"
+        
+                var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifire)
+        
+                if(cell == nil) {
+                    cell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifire)
+                }
+        
+                cell?.textLabel?.text = DistrictInfo?.info[indexPath.row]
+        
+                return cell!
+    }
+    
 
     @IBOutlet weak var titleLabel: UILabel!{
         didSet{
-            titleLabel.text = DistrictInfo?.name
-            print("name: \(DistrictInfo?.name)")
+            titleLabel.text = DistrictInfo?.title
         }
     }
     
@@ -34,23 +53,6 @@ class NewViewController: UIViewController, UITableViewDataSource
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (DistrictInfo?.info.count)!
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifire = "cell"
-        
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifire)
-        
-        if(cell == nil) {
-            cell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifire)
-        }
-        
-        cell?.textLabel?.text = DistrictInfo?.info[indexPath.row]
-        
-        return cell!
-    }
     
 
     /*

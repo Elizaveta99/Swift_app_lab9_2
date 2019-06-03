@@ -16,8 +16,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
-    let initialLocation = CLLocation(latitude: 52.09755 , longitude: 23.68775)
-    let regionRadius: CLLocationDistance = 10000
+    let initialLocation = CLLocation(latitude: 53.9 , longitude: 27.56659)
+    let regionRadius: CLLocationDistance = 20000
     
     var districts: [String: CLLocationCoordinate2D] = [:]
     
@@ -31,7 +31,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         for district in districts
         {
-            print(district)
             mapView.addAnnotation(ArtworkDistrict(title: district.key, coordinate: district.value))
         }
     }
@@ -39,10 +38,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        readDataFromDB()
+        getData()
         centerMapOnLocation(location: initialLocation)
-        print("loaded")
     }
 
 
@@ -54,27 +51,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             {
                 let artwork = sender as! ArtworkDistrict
                 var district = DistrictInfo()
-                district.name = artwork.title
+                district.title = artwork.title
                 
-                district.info = {
+                district.info =
+                {
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                    let managedObjectContext = appDelegate.persistentContainer.viewContext
-//                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Institution")
                     var info: [String] = []
-//                    do{
-                    let results = (appDelegate.getInfo()) // ?!
+                    let results = (appDelegate.getInfo())
                         for data in results
                         {
-                            
-                            if (data.value(forKey: "title") as! String) == district.name {
-                                info.append(data.value(forKey: "title") as! String)
+                            if (data.value(forKey: "title") as! String) == district.title
+                            {
+                                info.append(data.value(forKey: "info") as! String)
                             }
-                            
                         }
-//                    }catch let error as NSError {
-//                        print("Data loading error: \(error)")
-//                    }
-                    
                     return info
                 }()
                 
@@ -86,27 +76,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
-    func readDataFromDB()
+    func getData()
     {
-        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-//        let managedObjectContext = appDelegate.persistentContainer.viewContext
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "District")
-        
-        //do{
-            let results = (appDelegate.getDistrict())
-            for data in results
-            {
-                let coordinate = CLLocationCoordinate2D(latitude: data.value(forKey: "latitude") as! CLLocationDegrees , longitude: data.value(forKey: "longitude") as! CLLocationDegrees)
-                let title = data.value(forKey: "title") as! String
-                districts[title] = coordinate
-                
-            }
-//        }catch let error as NSError {
-//            print("Data loading error: \(error)")
-//        }
-        
+        let results = (appDelegate.getDistrict())
+        for data in results
+        {
+            let coordinate = CLLocationCoordinate2D(latitude: data.value(forKey: "latitude") as! CLLocationDegrees , longitude: data.value(forKey: "longitude") as! CLLocationDegrees)
+            let title = data.value(forKey: "title") as! String
+            districts[title] = coordinate
+        }
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)

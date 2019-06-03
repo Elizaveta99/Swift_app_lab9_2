@@ -8,11 +8,13 @@
 
 import Foundation
 
-class WeatherGetter {
+class WeatherGetter
+{
     
     static let apiKey = "b6965a28-eff9-4b85-a091-04a6305a1940"
     
-    static func getTempurature(latitude: Double, longitude: Double, completition: @escaping (_ temperature:Double) -> Void) {
+    static func getTempurature(latitude: Double, longitude: Double, completition: @escaping (_ temperature:Double) -> Void)
+    {
         
         var request = URLRequest(url: URL(string: "https://api.weather.yandex.ru/v1/forecast?lat=" +
             String(latitude) + "&lon=" + String(longitude) + "&lang=ru_Ru")!)
@@ -34,10 +36,6 @@ class WeatherGetter {
                 print(error.localizedDescription)
             }
         }
-        
         task.resume()
-        
-        
     }
-    
 }

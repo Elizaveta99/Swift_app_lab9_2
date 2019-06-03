@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../application_2/Model/ArtworkDistrict.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/eliz/Desktop/TP/lab9/application_2/application_2/Controller/NewViewController.swift">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>
